@@ -1,3 +1,3 @@
 # Web-Application-Development
 
-Welcome to My First Repository
+Welcome to Web Application Development Assignments
