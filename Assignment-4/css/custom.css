@@ -1,0 +1,13 @@
+/* Custom styles (optional) */
+.ui-content {
+    padding: 15px;
+  }
+  
+  img {
+    border-radius: 8px;
+    margin: 10px 0;
+  }
+  
+  form {
+    margin-top: 20px;
+  }
