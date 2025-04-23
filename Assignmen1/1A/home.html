@@ -33,13 +33,16 @@
         #Menu {
             /* background-color: #F08080;             */
         }
-
+        .Hero{
+            background-color: #ae001a;
+        }
         footer {
             background-color: #ae001a;
         }
 
+
         .navbar {
-            background-color: rgba(245, 245, 220, 1.0);
+            background-color: #ae001a;
         }
 
         /* Scrolling effect */
@@ -102,7 +105,7 @@
             font-style: normal;
             font-size: 110px;
             /* color: rgb(241, 114, 103); */
-            color: #E31837;
+            color: white;
         }
 
         .poppins-regular {
@@ -121,8 +124,12 @@
         }
     </style>
 
+
     <!-- CSS for Flip Card Effect -->
     <style>
+        
+
+
         .flip-card {
             perspective: 1000px;
             width: 100%;
@@ -169,6 +176,18 @@
             color: white;
             font-weight: bold;
         }
+        /* Hover Effects */
+.nav-link:hover span {
+    transform: scaleX(1) !important; /* Underline animation */
+}
+.nav-link.active span {
+    transform: scaleX(1) !important; /* Active page indicator */
+}
+
+/* Login Button Hover */
+.btn-outline-light:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
     </style>
 
 
@@ -179,50 +198,76 @@
     <script src="https://kit.fontawesome.com/a5d425fdf3.js" crossorigin="anonymous"></script>
 
     <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg   py-3 ">
-        <div class="container-fluid">
-            <!-- Brand Name -->
-            <a class="navbar-brand fw-bold fs-4 merriweather" href="#">Sweet Delights</a>
+    <!-- Enhanced Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark py-3 shadow-sm" style="background-color: #ae001a;">
+    <div class="container">
+        <!-- Brand Name with Logo (Optional) -->
+        <a class="navbar-brand d-flex align-items-center fw-bold fs-4 " href="#" style="letter-spacing: 1px;">
+           <!--  <i class="fa-solid fa-cake-candles me-2"></i> Cake icon for branding -->
+            Sweet Delights
+        </a>
 
-            <!-- Toggle Button for Mobile -->
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                data-bs-target="#navbarSupportedContent">
-                <span class="navbar-toggler-icon"></span>
-            </button>
+        <!-- Mobile Toggle Button (Styled) -->
+        <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" 
+                data-bs-target="#navbarSupportedContent" aria-expanded="false">
+            <span class="navbar-toggler-icon"></span>
+        </button>
 
-            <!-- Navbar Items -->
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                    <li class="nav-item"><a class="nav-link active fs-6" href="#">Home</a></li>
-                    <li class="nav-item"><a class="nav-link fs-6" href="#Menu">Menu</a></li>
-                    <li class="nav-item"><a class="nav-link fs-6" href="#About">About</a></li>
-                </ul>
+        <!-- Navbar Items -->
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mx-auto mb-2 mb-lg-0"> <!-- Centered nav items -->
+                <li class="nav-item mx-2">
+                    <a class="nav-link active fs-6 position-relative" href="#">
+                        Home
+                        <span class="position-absolute bottom-0 start-0 w-100 bg-light" style="height: 2px; transform: scaleX(0); transition: transform 0.3s;"></span>
+                    </a>
+                </li>
+                <li class="nav-item mx-2">
+                    <a class="nav-link fs-6 position-relative" href="#Menu">
+                        Menu
+                        <span class="position-absolute bottom-0 start-0 w-100 bg-light" style="height: 2px; transform: scaleX(0); transition: transform 0.3s;"></span>
+                    </a>
+                </li>
+                <li class="nav-item mx-2">
+                    <a class="nav-link fs-6 position-relative" href="#About">
+                        About
+                        <span class="position-absolute bottom-0 start-0 w-100 bg-light" style="height: 2px; transform: scaleX(0); transition: transform 0.3s;"></span>
+                    </a>
+                </li>
+            </ul>
 
-                <!-- Search Bar -->
-                <form class="d-flex">
-
-                    <a href="#" class="text-light me-3"><i class="fa-regular fa-user merriweather m-3"></i></a>
-                </form>
-            </div>
-        </div>
-    </nav>
-
-
-    <!-- Hero Section -->
-    <div class="container-fluid main-content d-flex align-items-center p-5">
-        <div class="row w-100 align-items-center">
-            <!-- Left Column: Text Content -->
-            <div class="col-md-6  text-center text-md-start">
-                <h1 class="display-4 fw-bold tangerine-bold">Welcome to<br> Sweet Delights</h1>
-                <p class="fs-4">We share sweetness!!</p>
-            </div>
-            <!-- Right Column: Image -->
-            <div class="col-md-6 d-flex justify-content-center">
-                <img src="hero-bg.jpg" alt="Cafe Interior" class="img-fluid rounded shadowd "
-                    style="max-width: 100%; height: auto;">
+            <!-- User Icon with Hover Effect -->
+            <div class="d-flex">
+                <a href="#" class="btn btn-outline-light btn-sm rounded-pill px-3 py-1 d-flex align-items-center">
+                    <i class="fa-regular fa-user me-2"></i>
+                    <span class="d-none d-md-inline">Login</span> <!-- Hidden on mobile -->
+                </a>
             </div>
         </div>
     </div>
+</nav>
+
+ <!-- Hero Section -->
+<div class="container-fluid main-content d-flex align-items-center py-5 Hero">
+    <div class="container">
+        <div class="row align-items-center text-center text-md-start">
+            
+            <!-- Image on Small Screens, Text Below -->
+            <div class="col-md-6 order-md-2 d-flex justify-content-center">
+                <img src="hero-bg.jpg" alt="Cafe Interior" class="img-fluid rounded shadow-lg"
+                    style="max-width: 100%; height: auto;">
+            </div>
+
+            <!-- Text Content -->
+            <div class="col-md-6 order-md-1">
+                <h1 class="display-4 fw-bold tangerine-bold">Welcome to<br> Sweet Delights</h1>
+                <p class="fs-4">We share sweetness!!</p>
+               
+            </div>
+        </div>
+    </div>
+</div>
+
 
 
 
@@ -355,137 +400,125 @@
     </div>
 
     <!-- About Section -->
-    <div class="container my-5" id="About">
-        <h2 class="fw-bold merriweather text-center p-5">Our Story</h2>
-        <div class="row align-items-center row-cols-1 row-cols-md-2 g-4">
-            <!-- Left Column: Image -->
+<div class="container my-5" id="About">
+    <h2 class="fw-bold merriweather text-center p-5">Our Story</h2>
+    <div class="row align-items-center gy-4">
+        <!-- Left Column: Image -->
+        <div class="col-lg-6 text-center">
+            <img src="bakery.jfif" alt="Bakery" class="img-fluid rounded shadow-lg">
+        </div>
+
+        <!-- Right Column: About Info -->
+        <div class="col-lg-6 d-flex align-items-center">
+            <div class="text-center text-lg-start px-3" style="max-width: 600px;">
+                <p class="text-muted">
+                    Founded in <b>1998</b>, <b>Sweet Delights</b> started as a small family-owned bakery with a
+                    simple mission—bringing the warmth of homemade baked goods to our community. Inspired by generations 
+                    of traditional recipes, we began crafting fresh bread, pastries, and cakes using the finest ingredients.
+                </p>
+                <p class="text-muted">
+                    What started as a cozy neighborhood bakery quickly grew into a beloved destination for dessert lovers. 
+                    With a passion for quality and innovation, we continue to blend classic flavors with modern twists, 
+                    ensuring that every bite is a delightful experience.
+                </p>
+                <p class="fw-bold">
+                    Today, <b>Sweet Delights</b> remains committed to spreading joy through our handcrafted treats, 
+                    one sweet creation at a time.
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+    <!-- Customer Feedback Section -->
+<section class="py-5">
+    <div class="container">
+        <h2 class="text-center fw-bold mb-4 merriweather">What Our Customers Say</h2>
+        <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+            <!-- Feedback Card 1 -->
             <div class="col">
-                <img src="bakery.jfif" alt="Bakery" class="img-fluid rounded shadow-lg">
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <!-- Front Side -->
+                        <div class="flip-card-front d-flex flex-column align-items-center justify-content-center text-center p-4">
+                            <img src="customer1.jpg" class="rounded-circle mb-3" alt="Customer 1" width="80" height="80">
+                            <h6 class="fw-bold mb-1">Emma Johnson</h6>
+                            <small class="text-muted">Verified Customer</small>
+                        </div>
+                        <!-- Back Side -->
+                        <div class="flip-card-back d-flex align-items-center justify-content-center p-3">
+                            <p class="text-center">"Absolutely love the pastries here! Everything is fresh, delicious, and made with love."</p>
+                        </div>
+                    </div>
+                </div>
             </div>
 
-            <!-- Right Column: About Info -->
-            <div class="col d-flex align-items-center justify-content-center">
-                <div class="ps-5 text-center text-md-start" style="max-width: 600px;">
+            <!-- Feedback Card 2 -->
+            <div class="col">
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front d-flex flex-column align-items-center justify-content-center text-center p-4">
+                            <img src="customer2.jpg" class="rounded-circle mb-3" alt="Customer 2" width="80" height="80">
+                            <h6 class="fw-bold mb-1">Michael Brown</h6>
+                            <small class="text-muted">Food Blogger</small>
+                        </div>
+                        <div class="flip-card-back d-flex align-items-center justify-content-center p-3">
+                            <p class="text-center">"The best bakery in town! The croissants are heavenly, and the service is excellent."</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
-                    <p class="text-muted mt-3">
-                        Founded in <b>1998</b>, <b>Sweet Delights</b> started as a small family-owned bakery with a
-                        simple mission—bringing
-                        the warmth of homemade baked goods to our community. Inspired by generations of traditional
-                        recipes, we began
-                        crafting fresh bread, pastries, and cakes using the finest ingredients.
-                    </p>
-                    <p class="text-muted">
-                        What started as a cozy neighborhood bakery quickly grew into a beloved destination for dessert
-                        lovers. With a
-                        passion for quality and innovation, we continue to blend classic flavors with modern twists,
-                        ensuring that every
-                        bite is a delightful experience.
-                    </p>
-                    <p class="fw-bold">
-                        Today, <b>Sweet Delights</b> remains committed to spreading joy through our handcrafted treats,
-                        one sweet
-                        creation at a time.
-                    </p>
+            <!-- Feedback Card 3 -->
+            <div class="col">
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front d-flex flex-column align-items-center justify-content-center text-center p-4">
+                            <img src="customer3.jpg" class="rounded-circle mb-3" alt="Customer 3" width="80" height="80">
+                            <h6 class="fw-bold mb-1">Sophia Martinez</h6>
+                            <small class="text-muted">Happy Customer</small>
+                        </div>
+                        <div class="flip-card-back d-flex align-items-center justify-content-center p-3">
+                            <p class="text-center">"I ordered a custom birthday cake, and it was beyond expectations! Highly recommend."</p>
+                        </div>
+                    </div>
                 </div>
             </div>
 
         </div>
     </div>
+</section>
 
-
-    <!-- Customer Feedback Section -->
-    <section class=" py-5">
-        <div class="container">
-            <h2 class="text-center fw-bold mb-4 merriweather">What Our Customers Say</h2>
-            <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4 p-5">
-
-                <!-- Feedback Card 1 -->
-                <div class="col">
-                    <div class="flip-card">
-                        <div class="flip-card-inner">
-                            <!-- Front Side -->
-                            <div class="flip-card-front d-flex flex-column align-items-center justify-content-center">
-                                <img src="customer1.jpg" class="rounded-circle mb-3" alt="Customer 1" width="100"
-                                    height="100">
-                                <h6 class="fw-bold mb-0">Emma Johnson</h6>
-                                <small class="text-muted">Verified Customer</small>
-                            </div>
-                            <!-- Back Side -->
-                            <div class="flip-card-back d-flex align-items-center justify-content-center">
-                                <p class="text-center px-3">"Absolutely love the pastries here! Everything is fresh,
-                                    delicious, and made with love."</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Feedback Card 2 -->
-                <div class="col">
-                    <div class="flip-card">
-                        <div class="flip-card-inner">
-                            <div class="flip-card-front d-flex flex-column align-items-center justify-content-center">
-                                <img src="customer2.jpg" class="rounded-circle mb-3" alt="Customer 2" width="100"
-                                    height="100">
-                                <h6 class="fw-bold mb-0">Michael Brown</h6>
-                                <small class="text-muted">Food Blogger</small>
-                            </div>
-                            <div class="flip-card-back d-flex align-items-center justify-content-center">
-                                <p class="text-center px-3">"The best bakery in town! The croissants are heavenly, and
-                                    the service is excellent."</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Feedback Card 3 -->
-                <div class="col">
-                    <div class="flip-card">
-                        <div class="flip-card-inner">
-                            <div class="flip-card-front d-flex flex-column align-items-center justify-content-center">
-                                <img src="customer3.jpg" class="rounded-circle mb-3" alt="Customer 3" width="100"
-                                    height="100">
-                                <h6 class="fw-bold mb-0">Sophia Martinez</h6>
-                                <small class="text-muted">Happy Customer</small>
-                            </div>
-                            <div class="flip-card-back d-flex align-items-center justify-content-center">
-                                <p class="text-center px-3">"I ordered a custom birthday cake, and it was beyond
-                                    expectations! Highly recommend."</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
+<!-- Map Location Section -->
+<section class="container my-5">
+    <div class="row align-items-center flex-column-reverse flex-lg-row">
+        <!-- Map Section (Appears Above on Small Screens) -->
+         <!-- Text Section -->
+        <div class="col-lg-6 text-center text-lg-start">
+            <h2 class="fw-bold merriweather">Visit Our Bakery</h2>
+            <p class="text-muted pt-3">
+                Experience the delightful aroma of freshly baked goods at our store.
+                We are located in the heart of the city, making it easy for you to drop by for a sweet treat!
+            </p>
+            <p><i class="fa-solid fa-location-dot me-2"></i> 123 Bakery Lane, City, Country</p>
+            <p><i class="fa-solid fa-clock me-2"></i> Mon - Sun: 8 AM - 8 PM</p>
+            <p><i class="fa-solid fa-phone me-2"></i> +123 456 7890</p>
+        </div>
+        <div class="col-lg-6 mb-4 mb-lg-0">
+            <div class="rounded shadow overflow-hidden">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3151.835434509374!2d144.95373531531895!3d-37.81720997975181!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad642af0f11fd81%3A0xf577d7b7b7b07b6a!2s123%20Bakery%20Lane%2C%20City%2C%20Country!5e0!3m2!1sen!2sus!4v1618972186789!5m2!1sen!2sus"
+                    width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy">
+                </iframe>
             </div>
         </div>
-    </section>
 
+        
+    </div>
+</section>
 
-    <!-- Map Location Section -->
-    <section class="container my-5">
-        <div class="row align-items-center">
-            <!-- Text Section -->
-            <div class="col-lg-6 text-center text-lg-start">
-                <h2 class="fw-bold merriweather">Visit Our Bakery</h2>
-                <p class="text-muted pt-4">
-                    Experience the delightful aroma of freshly baked goods at our store.
-                    We are located in the heart of the city, making it easy for you to drop by for a sweet treat!
-                </p>
-                <p><i class="fa-solid fa-location-dot mx-2"></i> 123 Bakery Lane, City, Country</p>
-                <p><i class="fa-solid fa-clock mx-2"></i> Mon - Sun: 8 AM - 8 PM</p>
-                <p><i class="fa-solid fa-phone mx-2"></i> +123 456 7890</p>
-            </div>
-
-            <!-- Map Section -->
-            <div class="col-lg-6">
-                <div class="rounded shadow overflow-hidden">
-                    <iframe
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3151.835434509374!2d144.95373531531895!3d-37.81720997975181!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad642af0f11fd81%3A0xf577d7b7b7b07b6a!2s123%20Bakery%20Lane%2C%20City%2C%20Country!5e0!3m2!1sen!2sus!4v1618972186789!5m2!1sen!2sus"
-                        width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy">
-                    </iframe>
-                </div>
-            </div>
-        </div>
-    </section>
 
 
 
