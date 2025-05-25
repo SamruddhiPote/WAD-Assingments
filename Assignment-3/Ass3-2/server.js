@@ -7,7 +7,8 @@ const mongoose = require('mongoose');
 const app = express();
 app.use(express.json());
 
-mongoose.connect('mongodb+srv://kbtug23648:MQtKzVTdnmtvo6Oy@test-cluster.a0dwxho.mongodb.net/?retryWrites=true&w=majority&appName=test-cluster/')
+mongoose.connect('mongodb+srv://<username>:<password>@test-cluster.a0dwxho.mongodb.net/?retryWrites=true&w=majority&appName=test-cluster
+')
 
 const UsersSchema = new mongoose.Schema({
     name: String,
